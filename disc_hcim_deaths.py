@@ -19,7 +19,7 @@ async def background_loop():
         if len(hcims) > 0:
             for i in hcims:
                 await channel.send(embed=gethighscores(i))
-        await asyncio.sleep(5)  # checks every 20 minutes.
+        await asyncio.sleep(60*20)  # checks every 20 minutes.
 
 
 client.loop.create_task(background_loop())
