@@ -19,7 +19,7 @@ while True:
             rsn = i.find('a')
             if rsn.string not in hcim["rsn"]:
                 hcim["rsn"].append(rsn.string)
-                #print(rsn.string + "has died !")
+                print(rsn.string + "has died !")
         with open('dead_hardcores.json', 'w') as f:
             json.dump(hcim, f, indent=4)
         f.close()
